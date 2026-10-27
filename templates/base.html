@@ -7,6 +7,15 @@
 </head>
 <body>
     {% include 'nav.html' %}
+
+    {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+                {{ message }}
+            {% endfor %}
+        </div>
+    {% endif %}
+
     {% block content %}
     {% endblock content %}
 </body>
