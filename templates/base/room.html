@@ -19,6 +19,10 @@
             {% for message in rmessages %}
                 <div>
                     <small>@{{ message.user }} {{ message.created|timesince }} ago</small>
+                    <br>
+                    {% if request.user == message.user %}
+                        <a href="{% url 'delete-message' message.id %}">Delete</a>
+                    {% endif %}
                     <p>{{message.body}}</p>
                     <hr>
                 </div>

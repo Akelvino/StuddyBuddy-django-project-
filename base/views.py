@@ -134,3 +134,10 @@ def deleteRoom(request, pk):
     else:
         room.delete()
         return redirect('home')
+
+@login_required(login_url='login')
+def deleteMessage(requst,pk):
+    message = get_object_or_404(Message, id=pk)
+    room_id = message.room.id
+    message.delete()
+    return redirect('room', pk=room_id)
