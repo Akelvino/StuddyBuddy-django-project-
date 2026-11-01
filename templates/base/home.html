@@ -2,18 +2,11 @@
 
 {% block content %}
 
-<style>
-    .home-container{
-        display: grid;
-        grid-template-columns: 1fr 3fr 1fr;
-    }
-</style>
-
-<div class="home-container">
+<div class="grid grid-cols-6 gap-2">
     <div>
         {% include 'base/topic_component.html' %}
     </div>
-    <div>
+    <div class="col-span-4">
         <p>{{ room_count }} rooms available</p>
         <a href="{% url 'create-room' %}">Create Room</a>
         <hr>

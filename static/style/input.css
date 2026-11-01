@@ -1,7 +1,28 @@
 @import "tailwindcss";
 
+@theme{
+    --color-main:#71c6dd;
+    --color-light: #e1f6fb;
+    --color-dark: #3f4156;
+    --color-dark-medium: #51546e;
+    --color-dark-light: #696d97;
+    --color-light: #e5e5e5;
+    --color-gray: #8b8b8b;
+    --color-light-gray: #b2bdbd;
+    --color-bg: #2d2d39;
+    --color-success: #5dd693;
+    --color-error: #fc4b0b; 
+}
+
 @layer base{
     body{
-        @apply bg-red-500 text-white;
+        @apply bg-bg text-light-gray min-h-screen;
+    }
+    a{
+        @apply text-main block;
     }
 }
+
+
+
+ 
