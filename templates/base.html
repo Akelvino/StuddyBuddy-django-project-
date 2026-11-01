@@ -1,12 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+{% load static %}
+
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="{% static 'style/output.css' %}" rel="stylesheet">
 </head>
-<body>
-    {% include 'nav.html' %}
+<body class="container mx-auto">
+  {% include 'nav.html' %}
 
     {% if messages %}
         <div class="messages">
@@ -15,6 +17,8 @@
             {% endfor %}
         </div>
     {% endif %}
+
+    <p class="text-green-500 bg-red-500">Testing tailwind</p>
 
     {% block content %}
     {% endblock content %}
